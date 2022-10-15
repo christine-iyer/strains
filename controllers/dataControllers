@@ -1,0 +1,72 @@
+const Strain = require('../models/strain')
+const { update } = require('../models/strain')
+const dataController = {
+     //Index
+     index(req, res,next){
+          Strain.find({}, (err,foundStrains) => {
+               if (err) {
+                    res.status(400).send({
+                         msg:err.message
+                    })
+               } else {
+                    res.locals.data.strains = foundStrains
+                    next()
+                    }
+               })
+          },
+     //Destroy
+     destroy(req,res,next) {
+          Strain.findByIdAndDelete(req.params.id, (err, deletedStrains) => {
+               if(err) {
+                    res.status(400).send({
+                         msg: err.message
+                    })
+               } else {
+                    res.locals.data.strain = deletedStrain
+                    next()
+               }
+          })
+     },
+     //Update
+     update(req, res,next) {
+          Strain.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, deletedStrain) => {
+               if (err){
+                    res.status(400).send({
+                         msg: err.message
+                    })
+               } else {
+                    res.locals.data.strain = updatedStrain
+                    next()
+               }
+          })
+     },
+     //Create
+     create(req,res,next){
+          Strain.create(req.body, (err, createdStrain) => {
+               if (err) {
+                    res.status(400).send({
+                         msg: err.message
+                    })
+               } else {
+                    res.locals.data.strain = createdStrain
+                    next()
+               }
+          })
+     }, 
+     //Edit
+     //Show
+     show(req,res,next) {
+          Strain.findById(req.params.id, (err, foundStrain) => {
+               if (err) {
+                    res.status(400).send({
+                         msg: err.message,
+                         output: "Could not find a fruit with that ID"
+                    })
+               } else {
+                    res.locals.data.strain = found.Strain 
+                    next()
+               }
+          })
+     }
+}
+module.exports = dataController
