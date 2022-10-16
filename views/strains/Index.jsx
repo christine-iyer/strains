@@ -10,16 +10,16 @@ class Index extends React.Component{
                 <ul>
                     {
                         strains.map((strain) => {
-                            const {Strain, Type, Rating, Effects, Flavor,Description,Comments,_id} = strain
+                            const {Strain, Type, Rating, Effects, Flavor,Description,Comments,_id,Date} = strain
                             return (
                                 <li key={_id}>
                                     <a href={`/strains/${_id}`}>
-                                    {Strain}</a> is {Type}
+                                    {Strain} ({Type.charAt(0).toUpperCase()})</a>
                                     
                                      <br/>
                                     
                                     <form method="POST" action={`/strains/${_id}?_method=DELETE`}>
-                                        <input type="submit" value={`Delete ${Type} ${Strain}`}/>
+                                        <input type="submit" value={`Delete ${Strain}, a ${Type}??? Really?`}/>
                                     </form>
                                 </li>
                             )

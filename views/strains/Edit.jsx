@@ -4,7 +4,7 @@ const Default = require('../layouts/Default.jsx')
 
 class Edit extends React.Component {
     render(){
-        const {Strain, Type, Rating, Effects, Flavor,Description,Comments,_id} = this.props.strain
+        const {Strain, Type, Rating, Effects, Flavor,Description,Comments,_id, Date} = this.props.strain
         return (
             <Default title={`${Strain} Edit Page`} fruit={this.props.strain}>
                 <form method="POST" action={`/fruits/${_id}?_method=PUT`}>

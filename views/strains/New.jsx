@@ -13,7 +13,7 @@ class New extends React.Component {
                 Flavor: <input type="text" name="Flavor" placeholder='Type'></input><br/>
                 Description: <input type="text" name="Description"></input><br/>
                 Comments: <input type="text" name="Comments"></input><br />
-                Date: <input type="date" name="Date"></input><br />
+                {/* Date: <input type="date" name="Date"></input><br /> */}
                 <input type="submit" value="Submit Strain"></input>
             </form>
             </Default>

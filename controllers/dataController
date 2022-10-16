@@ -42,6 +42,7 @@ const dataController = {
      },
      //Create
      create(req,res,next){
+          req.body.Date = new Date()
           Strain.create(req.body, (err, createdStrain) => {
                if (err) {
                     res.status(400).send({
