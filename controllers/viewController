@@ -1,0 +1,25 @@
+const RESOURCE_PATH = '/strains'
+const viewController = {
+     index(req,res,next){
+          res.render('strains/Index', res.locals.data)
+
+     },
+     newView(req,res,next){
+          res.render('strains/New')
+     },
+     edit(req,res,next){
+          res.render('strains/Edit', res.locals.data)
+     },
+     show(req,res,next){
+          res.render('strains/Show', res.locals.data)
+     },
+     redirectHome(req,res,next){
+          res.redirect(RESOURCE_PATH)
+     }, 
+     redirectShow(req,res,next){
+          const strainId = req.params.id || res.locals.data.strain._id
+          res.redirect(`${RESOURCE_PATH}/${strainId}`)
+
+     }
+}
+module.exports = viewController

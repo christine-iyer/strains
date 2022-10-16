@@ -13,8 +13,8 @@ class Default extends React.Component {
                     <nav>
                         <a href="/strains">Go to Home Page For strains</a>
                         <a href="/strains/new">Create a New strain</a>
-                        { strain? <a href={`/fruits/${strain._id}/edit`}> {strain.name} Edit Page </a> : ''}
-                        { strain? <a href={`/strains/${strain._id}`}>{strain.name} Show Page</a> : ''}
+                        { strain? <a href={`/strains/${strain._id}/edit`}> {strain.Strain} Edit Page </a> : ''}
+                        { strain? <a href={`/strains/${strain._id}`}>{strain.Strain} Show Page</a> : ''}
                     </nav>
                     <h1>
                         {title}

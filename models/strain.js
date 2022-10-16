@@ -7,7 +7,9 @@ const strainSchema = new mongoose.Schema({
      Rating: { type: Number, required: true }, 
      Effects: { type: String, required: true },      
      Flavor: { type: String, required: true }, 
-     Description: { type: String, required: true }
+     Description: { type: String, required: true }, 
+     Comments: { type: String, required: true }, 
+     Date: { type: Date, required: true }
 });
 
 //Make a Model from the Schema

@@ -1,5 +1,5 @@
-const Strain = require('../models/strain')
 const { update } = require('../models/strain')
+const Strain = require('../models/strain')
 const dataController = {
      //Index
      index(req, res,next){
@@ -16,7 +16,7 @@ const dataController = {
           },
      //Destroy
      destroy(req,res,next) {
-          Strain.findByIdAndDelete(req.params.id, (err, deletedStrains) => {
+          Strain.findByIdAndDelete(req.params.id, (err, deletedStrain) => {
                if(err) {
                     res.status(400).send({
                          msg: err.message
@@ -29,7 +29,7 @@ const dataController = {
      },
      //Update
      update(req, res,next) {
-          Strain.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, deletedStrain) => {
+          Strain.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedStrain) => {
                if (err){
                     res.status(400).send({
                          msg: err.message
@@ -60,10 +60,10 @@ const dataController = {
                if (err) {
                     res.status(400).send({
                          msg: err.message,
-                         output: "Could not find a fruit with that ID"
+                         output: "Could not find a strain with that ID"
                     })
                } else {
-                    res.locals.data.strain = found.Strain 
+                    res.locals.data.strain = foundStrain 
                     next()
                }
           })

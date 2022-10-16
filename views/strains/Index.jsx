@@ -10,7 +10,7 @@ class Index extends React.Component{
                 <ul>
                     {
                         strains.map((strain) => {
-                            const {Strain, Type, Rating, Effects, Flavor,Description,_id} = strain
+                            const {Strain, Type, Rating, Effects, Flavor,Description,Comments,_id} = strain
                             return (
                                 <li key={_id}>
                                     <a href={`/strains/${_id}`}>
