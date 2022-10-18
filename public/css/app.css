@@ -1,28 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa%7CRighteous');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Noto+Sans');
 
 /* (https://media.istockphoto.com/vectors/cannabis-vector-id483151619?b=1&k=20&m=483151619&s=170667a&w=0&h=2LNN6cy4NvfwmassnzQA8e8N1iMWt2_SxR_hJ3kg7XA= */
 body {
   margin: 0;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Righteous', cursive;
   background-image: url(botanist.jpg);
   background-repeat: round;
 
 }
-/* body::before {    
-  content: "";
-  background-image: url(botanist.png);
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.1;
-} */
+
 
 
 h1 {
   font-family: 'Righteous', cursive;
-  background: rgb(173, 164, 181);
+  background: rgb(216, 108, 89);
   margin:0;
   margin-bottom: .5em;
   padding: 1em;
@@ -56,7 +47,7 @@ input[type=text] {
 input[type=submit] {
   padding: .3em;
   color: brown;
-  background: rgb(173, 164, 181);;
+  background: rgb(212, 164, 150;
   font-size: 1em;
   border-radius: 10%;
 }
