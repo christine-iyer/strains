@@ -7,7 +7,7 @@ class Edit extends React.Component {
         const {Strain, Type, Rating, Effects, Flavor,Description,Comments,_id, Date} = this.props.strain
         return (
             <Default title={`${Strain} Edit Page`} fruit={this.props.strain}>
-                <form method="POST" action={`/fruits/${_id}?_method=PUT`}>
+                <form method="POST" action={`/strains/${_id}?_method=PUT`}>
                     Strain: <input type="text" name="Strain" defaultValue={Strain}></input><br/>
                     Type: <input type="text" name="Type" defaultValue={Type}></input><br />
                     Rating: <input type="number" name="Rating" defaultValue={Rating}></input><br/>

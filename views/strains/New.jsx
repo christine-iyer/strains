@@ -4,7 +4,7 @@ const Default = require('../layouts/Default.jsx')
 class New extends React.Component {
     render(){
         return (
-            <Default title="Create A New Strain">
+            <Default title="Create A New Log Entry">
             <form method="POST" action="/strains">
                 Strain: <input type="text" name="Strain" placeholder='Strain'></input><br/>
                 Type: <input type="text" name="Type" placeholder='Type'></input><br/>

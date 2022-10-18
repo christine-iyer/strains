@@ -6,7 +6,7 @@ class Index extends React.Component{
     render(){
         const {strains} = this.props
         return(
-            <Default title="strains Index Page">
+            <Default title="Log Entries Index Page">
                 <ul>
                     {
                         strains.map((strain) => {

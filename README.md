@@ -24,12 +24,12 @@ Restful Routes
 | #  |Action   | URL |  HTTP Verb |  JSX file name |  mongoose |
 |---|---|---|---|---|---|
 |  1 | Index  |  /logs/ |  GET |  Index.jsx | Log.find  |
-|   2|  Show |   |   |   |   |
+|   2|  Show | /logs/:id  |  GET | Show.jsx   |  Log.findById|
 |  3 |  New |  /logs/new | GET  |  New.jsx |  none |
-|   4|  Create | /logs/  |  POST |   none| Log.create(req.body)  |
-|   5| Edit  |   |   |   |   |
-|   6|  Update |   |   |   |   |
-|   7|  Destroy | Delete  |   |   |   |
+|   4|  Create | /logs  |  POST |   none| Log.create(req.body)  |
+|   5| Edit  | /logs/:id/edit  | GET  | Edit.jsx  |  Log.findById |
+|   6|  Update | /logs/:id   |  PUT|  none |  Log.findByIdAndUpdate |
+|   7|  Destroy | /logs/:id   |  DELETE|  none |  Log.findByIdAndDelete |
 
 ### Captain' Log
 
